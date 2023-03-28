@@ -1,0 +1,21 @@
+{# utilisation du layout #}
+{% extends "base.html.twig" %}
+
+
+{# title of page #}
+{% block title %} 
+Acceuil 
+{% endblock title %}
+
+
+{# content #}
+{% block body %}
+    <h1 class="text-indigo-700 font-bold text-3xl pb-6 text-center">Nos derniers articles</h1>
+
+    <div class="grid grid-cols-3 space-x-3s">
+        {% include "blog/components/card.html.twig" %}
+        {% include "blog/components/card.html.twig" %}
+        {% include "blog/components/card.html.twig" %}
+    </div>
+
+{% endblock %}
