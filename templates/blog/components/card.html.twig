@@ -1,11 +1,14 @@
-<div class="card w-96 bg-base-100 shadow-xl max-w-sm bg-gray-500 rounded-md bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-30 border border-gray-100">
+<div class="card w-96 bg-base-100 shadow-xl max-w-sm bg-gray-500 rounded-md bg-clip-padding backdrop-filter backdrop-blur-none bg-opacity-30 border border-gray-100 mb-[40px]">
   
-  <figure><img src="{{ asset('img/card1.avif') }}" alt="Shoes" /></figure>
+  <figure><img src="{{ post.urlimg }}" alt="Shoes" /></figure>
   <div class="card-body">
-    <h2 class="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 class="card-title">{{ post.title}}</h2>
+    <p>{{ post.content }}</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">Lire</button>
+      
+        <a href="{{ path('app_show', { 'id':post.id }) }}" class="btn btn-primary">Lire</a>
+      
     </div>
   </div>
 </div>
+
