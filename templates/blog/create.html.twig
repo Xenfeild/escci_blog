@@ -12,7 +12,13 @@ Acceuil
 {% block body %}
     <h1 class="text-indigo-700 font-bold text-3xl pb-6 text-center">Créer un article</h1>
 
-    {{ form(showForm) }}    
+    <div class="">
+        {{ form_start(showForm) }}    
+            {{ form_widget(showForm) }}
+            <div class="mt-5">
+                <input type="submit" value="envoyer" class="btn btn-secondary">    
+            </div>
+        {{ form_end(showForm)}}
     </div>
 
 {% endblock %}
